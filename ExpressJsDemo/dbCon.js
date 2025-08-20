@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const mongoURI="mongodb://localhost:27017/Hello"
+const mongoURI=process.env.MONGODB_URL
 
 mongoose.connect(mongoURI)
 .then(()=>{
