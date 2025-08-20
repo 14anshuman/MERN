@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        @media screen and (min-width:1200px) {
+            body{
+                background-color: grey;
+            }
+            #myH::before{
+               content: "Xtra Large Device";
+            }
+            
+            
+        }
+
+         @media screen and (min-width:992px) and (max-width:1199px) {
+            body{
+                background-color: skyblue;
+            }
+             #myH::before{
+               content: "Large Device";
+            }
+        }
+         @media screen and (min-width:768px) and (max-width:991px) {
+            body{
+                background-color: greenyellow;
+            }
+             #myH::before{
+               content: "Medium Device";
+            }
+        }
+          @media screen and (min-width:567px) and (max-width:767px) {
+            body{
+                background-color: khaki;
+            }
+             #myH::before{
+               content: "Small Device";
+            }
+        }
+        @media screen and (max-width:567px) {
+            body{
+                background-color: lightgreen;
+            }
+             #myH::before{
+               content: "Xtra Small Device";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myH"></h1>
+</body>
+</html>

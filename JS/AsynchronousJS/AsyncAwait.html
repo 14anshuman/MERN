@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+    
+//    let data= fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1');
+//    data.then((data)=>{
+//     let j=data.json();
+//     j.then((d)=>{
+//         console.log(d); 
+//     })
+//    })
+
+     async function fetchData(){
+        let data=await fetch('https://fakestoreapi.com/products');
+        let d=await data.json();
+        console.log(d);
+        
+      }
+
+      fetchData()
+   
+
+    </script>
+  </head>
+  <body></body>
+</html>

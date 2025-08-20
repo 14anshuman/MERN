@@ -1,0 +1,15 @@
+JSon web token 
+securely transmit data between cleint and server with the need of storing sessions on server
+jwt -3 parts (header.payload.secretkey)
+options (optional)- expiresIn, issuer, subject ,audience
+
+replaces session functinality
+
+server creates token send to client stores on localstorage or crate  http cookies
+
+jwt.sign    and jwt.verify
+
+Sending JWT in requests
+request(http://   ,{
+    headers:{Authorization:`Bearer ${localstorga.get(itam)}`}
+});

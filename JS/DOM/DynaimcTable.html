@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="myBtn">Button</button>
+    <div id="myDiv"></div>
+  </body>
+  <script>
+    let userData = [
+      { uid: 22, unm: "ansh", age: 34, mob: 232134233 },
+      { uid: 42, unm: "anshgrg", age: 54, mob: 325323322 },
+      { uid: 242, unm: "anshuma", age: 24, mob: 98736535 },
+      { uid: 2232, unm: "Aditya", age: 14, mob: 98736535 },
+      { uid: 222, unm: "A", age: 34, mob: 98736535 },
+      { uid: 42, unm: "anshgrg", age: 54, mob: 98736535 },
+      { uid: 242, unm: "ansh", age: 24, mob: 98736535 },
+      { uid: 2232, unm: "ansh", age: 14, mob: 98736535 },
+      { uid: 222, unm: "ansh", age: 34, mob: 98736535 },
+    ];
+    sortCols = {};
+    function createTable(data) {
+      const myTab = document.createElement("table");
+      myTab.setAttribute("border", "2px");
+      myTab.setAttribute("align", "center");
+      myTab.setAttribute("bgcolor", "#ddd");
+      myTab.setAttribute("width", "20px");
+      //thead creation
+      const thead = document.createElement("thead");
+      const row = thead.insertRow();
+
+      //read field values
+      const keys = Object.keys(data[0]);
+      console.log(keys);
+      //create headings using keys
+      keys.forEach((key) => {
+        let colhead = document.createElement("th");
+
+        colhead.textContent = key.toUpperCase();
+        colhead.style.backgroundColor = "red";
+        colhead.style.color = "white";
+        colhead.style.cursor = "pointer";
+        colhead.addEventListener("click", () => {
+          const sortedData = [...data].sort((a, b) => {
+            if (typeof a[key] === "number") {
+              return sortCols[key] ? a[key] - b[key] : b[key] - a[key];
+            } else if (typeof a[key] === "string") {
+              return sortCols[key]
+                ? a[key].localeCompare(b[key])
+                : b[key].localeCompare(a[key]);
+            } else {
+              return 0;
+            }
+          });
+          const tab = document.getElementById("myDiv");
+          tab.innerHTML = "";
+          tab.appendChild(createTable(sortedData));
+        });
+        row.append(colhead);
+      });
+      myTab.append(thead);
+
+      let tbody = document.createElement("tbody");
+      //Add use data into table rows from each object
+      data.forEach((user) => {
+        let row = tbody.insertRow();
+        const values = Object.values(user);
+        values.forEach((val) => {
+          let col = row.insertCell();
+          col.textContent = val;
+        });
+        tbody.append(row);
+      });
+
+      myTab.append(tbody);
+
+      return myTab;
+    }
+
+    const btn = document.getElementById("myBtn");
+    const div = document.getElementById("myDiv");
+    btn.addEventListener("click", () => {
+      const tab = document.getElementById("myDiv");
+      tab.append(createTable(userData));
+    });
+  </script>
+</html>

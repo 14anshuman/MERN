@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="mybtn">Button</button>
+  </body>
+  <script>
+    const btn = document.getElementById("mybtn");
+    btn.addEventListener("click", () => {
+      const myT = document.createElement("table");
+      myT.setAttribute('border','2px')
+      let row1 = myT.insertRow();
+      let col1 = row1.insertCell();
+      col1.textContent='Col1'
+      let col2 = row1.insertCell();
+      let inpEle=document.createElement('input');
+      inpEle.setAttribute('type','text')
+      col2.append(inpEle);
+
+      let col3 = row1.insertCell();
+      col3.textContent='Col3'
+
+    
+
+      
+
+
+
+
+      document.body.append(myT)
+
+      
+    
+
+    });
+  </script>
+</html>

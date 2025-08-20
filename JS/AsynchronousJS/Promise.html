@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //handles asynchronous operations returned promise callback hell current state pending 
+        //An object  Pending Fulfilled  Rejected
+        const promise=new Promise((resolve,reject)=>{
+               let isValid=true;
+               if(isValid){
+                  resolve("data received...");
+               }else{
+                  reject("Error");
+               }
+        });
+        promise.then((data)=>{      //handling promise
+            console.log(data);  
+        }).catch((err)=>{
+            console.log(err);
+        }).finally(()=>{
+            console.log("finally");
+            
+        })
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

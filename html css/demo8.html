@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* tbody>tr:nth-child(even){
+            background-color: aqua;
+        }
+         tbody>tr:nth-child(odd){
+            background-color: firebrick;
+        } */
+
+
+        /* tbody>tr:nth-child(2n+2){
+            background-color: chocolate;
+        } */
+
+
+        tbody>tr:first-child:hover~:last-child{
+            background-color: chocolate;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<h2>Sample Data Table</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>Country</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td>Alice Johnson</td>
+            <td>29</td>
+            <td>Marketing</td>
+            <td>USA</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Bob Smith</td>
+            <td>34</td>
+            <td>Sales</td>
+            <td>Canada</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Charlie Lee</td>
+            <td>41</td>
+            <td>HR</td>
+            <td>UK</td>
+            <td>Inactive</td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Dana White</td>
+            <td>27</td>
+            <td>Finance</td>
+            <td>Germany</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>005</td>
+            <td>Eva Green</td>
+            <td>31</td>
+            <td>IT</td>
+            <td>Australia</td>
+            <td>Active</td>
+        </tr>
+        <tr>
+            <td>006</td>
+            <td>Frank Zhao</td>
+            <td>38</td>
+            <td>Development</td>
+            <td>China</td>
+            <td>Inactive</td>
+        </tr>
+        <tr>
+            <td>007</td>
+            <td>Grace Kim</td>
+            <td>25</td>
+            <td>Support</td>
+            <td>South Korea</td>
+            <td>Active</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="6">&copy;Hello</td>
+            </tr>
+        </tfoot>
+    </tbody>
+</table>
+
+</body>
+</html>

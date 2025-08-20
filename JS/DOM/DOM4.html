@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfun(){
+
+        }
+    </script>
+</head>
+<body>
+    <!-- <button id="myBtn">Button</button> -->
+    <button id="myBtn">Button 2</button>
+    <div id="myDiv"></div>
+</body>
+<script>
+    const btn=document.getElementById('myBtn');
+    btn.addEventListener("click",()=>{
+        
+        // const myH=document.createElement('h1');
+        // myH.textContent="My first dynamic heading"
+        // myH.style.color='red'
+        // // document.body.append(myH);
+        // document.body.prepend(myH)
+        // console.log(myH);
+
+
+
+        
+
+        const inpEle=document.createElement('input');
+         inpEle.setAttribute('type','text')
+         inpEle.setAttribute('name','myname')
+         inpEle.setAttribute('placeholder','enter name')
+         
+         const eleDiv=document.getElementById('myDiv');
+         eleDiv.style.backgroundColor="red"
+         eleDiv.append(inpEle)
+        console.log(inpEle);
+       
+        
+
+
+
+        
+        
+    })
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap:2px;
+        }
+        .container>*{
+            padding: 20px;
+            text-align: center;
+            border: 1px solid navy;
+            border-radius: 5PX;
+            flex: 1 1 100%;
+        }
+        .container>header{
+            background-color: navy;
+            color: beige;
+        }
+        @media screen and (min-width:1200px) {
+            .maincontent{
+                order:2;
+                flex: 3 3 0%;
+            }
+            .aside1{
+                order:1;
+                flex:1 1 0%;
+            }
+            .aside2{
+                order: 3;
+                flex: 1 1 0%;
+            }
+        .container>footer{
+            order: 4;
+        }        
+        }
+        @media screen and (min-width:768px) and (max-width:899px){
+            .aside1{
+                flex: 1 1 0%;
+            }
+            .aside2{
+                flex: 1 1 0%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        Header
+    </header>
+    <nav>
+        Navigation Bar
+    </nav>
+    <article class=".maincontent">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum voluptates, corrupti distinctio adipisci quaerat debitis nesciunt aperiam corporis esse nulla, nemo dolorum et labore exercitationem illum deleniti! Voluptatem, at necessitatibus.</p>
+    </article>
+    <aside class="aside1">
+        Aside 1
+    </aside>
+    <aside  class="aside2">
+        Aside 2
+    </aside>
+    <footer>Footer</footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+1) npm init
+2) npm init -y
+3) npm i or install packagename
+4) npm uninstall packagename
+5) npm i packagename -save (for dependency adding)
+6) npm i packagename -g (globally installation)
+
+7)// "demoScript":"nodemon index.js"  npm run demoScript
+---------------------------------------------------------------
+8)EJS-  template engine  install-> views folder-> view-file-> set view engine index.js file -> res.render("view name")

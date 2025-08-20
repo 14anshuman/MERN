@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        My divison
+    <h1>Heading</h1>
+    <p id="myP" style="display: none;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, tempora?
+    </p>
+    </div>
+
+
+    <button id="mybtn">Button</button>
+</body>
+<script>
+    const btn=document.getElementById("mybtn");
+    btn.addEventListener("click",()=>{
+        const eleDiv=document.getElementById("myDiv");
+        // console.log(eleDiv);
+        console.log(eleDiv.innerText);  //only rendreing wala part
+        console.log(eleDiv.textContent);
+        console.log(eleDiv.innerHTML);
+        
+        
+    })
+</script>
+</html>

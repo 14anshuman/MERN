@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style type="text/css">
+        .container{
+            background-color: darkgray;
+            width: 700px;
+            height: 600px;
+            border: 1px solid black;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            /* justify-items:center;
+            align-items: center; */
+            /* flex-direction: column-reverse; */
+            /* justify-content: space-between; */
+            /* justify-content: flex-end; */
+            /* justify-content: center;  */
+            /* align-items: center; */
+            /* align-items: center; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+            flex-wrap: wrap;
+            /* flex-flow:row wrap;
+            align-content: center; */
+            
+
+        
+        
+        }
+        .container>div{
+            width:100px;
+            height: 100px;
+            text-align: center;
+            
+        }
+        .container>div:nth-child(odd){
+            background-color: cadetblue
+        }
+        .container>div:nth-child(even){
+            color: white;
+            background-color: rgb(25, 58, 101)
+        }
+        #myDiv1{
+            order:1;
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 200px; */
+            flex:1 1 100%;
+        }
+        #myDiv2{
+           order:3;
+           flex: 1 1 0%;
+        }
+        
+        #myDiv3{
+           order:3;
+           flex: 1 1 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="myDiv1">Div 1</div>
+        <div id="myDiv2">Div 2</div>
+        <div id="myDiv3">Div 3</div>
+        
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr color="red"/>
+    <h1 align="center">Application Default Page </h1>
+    <h3 align="center">Welcome <%= name %></h3>
+    <h3 align="center">Welcome <%- name %></h3>
+    
+    <hr color="red"/>
+
+
+   <!-- <%= msg %>
+   <%- msg %> -->
+
+   <% if(isValid) {%>
+
+       <p >
+        <h4>
+            Welcome <%= name %>
+        </h4>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio id voluptate iusto, quo omnis recusandae?
+       </p>
+    <%}%>
+
+</body>
+</html>

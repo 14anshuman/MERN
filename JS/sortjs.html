@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let userData=[
+        {uid:1004,unm:"pachin",age:55},
+        {uid:1002,unm:"Rahul",age:45},
+        {uid:1003,unm:"Aman",age:25},
+        {uid:1005,unm:"Hardik",age:35}
+    ]
+
+   let r= [...userData].sort((x,y)=>{
+        return x.uid-y.uid;
+    })
+    console.log(r);
+
+     r=[...userData].sort((x,y)=>{
+        return x.age-y.age;
+    })
+     console.log(r);
+     r=[...userData].sort((x,y)=>{
+        return x.unm.localeCompare(y.unm);
+    })
+    console.log(r);
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

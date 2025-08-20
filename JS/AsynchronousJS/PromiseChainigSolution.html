@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+    
+
+      let userData = [
+        { uid: 22, unm: "ansh", age: 34, mob: 232134233 },
+        { uid: 42, unm: "anshgrg", age: 54, mob: 325323322 },
+        { uid: 242, unm: "anshuma", age: 24, mob: 98736535 },
+        { uid: 2232, unm: "Aditya", age: 14, mob: 98736535 },
+        { uid: 222, unm: "Ahdu", age: 34, mob: 98736535 },
+      ];
+
+      function fetchData(userId, fn) {
+        console.log(`Fteching data for userid ${userId}`);
+        return new Promise((res, rej) => {
+          setTimeout(() => {
+            let user = userData.find((user) => user.uid == userId);
+
+            if (user) {
+              res(user);
+            } else {
+              rej("User Not Found");
+            }
+          }, 2000);
+        });
+      }
+
+
+      async function fetchAllData(){
+         let data=await fetchData(22);
+         console.log(data);
+
+         data=await fetchData(222);
+         console.log(data);
+         
+      }
+
+      fetchAllData()
+
+    </script>
+  </head>
+  <body></body>
+</html>

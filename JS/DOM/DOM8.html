@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="radio" name="gender" value="Male"/>Male
+    <input type="radio" name="gender" value="Female"/>Female -->
+
+    <input type="checkbox" name="cities" value="Mumbai" />Mumbai
+    <input type="checkbox" name="cities" value="Delhi" />Deljhi
+    <input type="checkbox" name="cities" value="Chennai" />Chennai
+    <input type="checkbox" name="cities" value="Calcutta" />Calcutta
+    <!-- <button id="myBtn"></button> -->
+    <button id="selectAll">Select All</button>
+  </body>
+  <script>
+    // const btn = document.getElementById("myBtn");
+    // btn.addEventListener("click", () => {
+    //   // const radioLst=document.getElementsByName('gender');
+      // radioLst.forEach((radio)=>{
+      //     // console.log(radio.value);
+      //     if(radio.checked){
+      //         console.log(radio.value)
+      //     }
+      // })
+      // const checkbox=document.getElementsByName("cities");
+      // checkbox.forEach((check)=>{
+      //     //    console.log(check.value)
+      //        if(check.checked){
+      //         console.log(check.value)
+      //        }
+      // })
+      let isChecked = false;
+      const btn2 = document.getElementById("selectAll");
+      btn2.addEventListener("click", () => {
+        const chkList = document.getElementsByName("cities");
+        if (isChecked) {
+          chkList.forEach((chk) => {
+            chk.checked = false;
+          });
+        } else {
+          chkList.forEach((chk) => {
+            chk.checked = true;
+          });
+        }
+        isChecked = !isChecked;
+      });
+
+  </script>
+</html>

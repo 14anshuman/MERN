@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        <h1 id="h1">Heading 1</h1>
+    <h1 class="">Heading 2</h1>
+    </div>
+    
+    <h1>Heading 3</h1>
+    <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum assumenda eos rem, porro repudiandae sint incidunt aut dicta quae expedita molestias placeat perspiciatis?</p>
+    <h1>Heading 4</h1>
+
+
+
+    <button id="myBtn">Button</button>
+</body>
+<script>
+    const btn = document.getElementById("myBtn");
+      btn.addEventListener("click", () => {
+        // let h1list=document.getElementsByTagName('h1');
+        // console.log(h1list)
+        // let h=document.querySelector('h1');
+        // console.log(h);
+        // let h=document.querySelectorAll('.h1');
+        // console.log(h);
+        // let hp=document.querySelector('.p');
+        // console.log(hp);
+
+        // let ele=document.querySelector("h1:nth-child(3)");
+        // console.log(ele);
+
+        let ele=document.querySelector('#myDiv');
+        console.log(ele);
+        console.log(ele.parentElement);
+        console.log(ele.children);
+        console.log(ele.childNodes)
+
+    
+    });
+</script>
+</html>

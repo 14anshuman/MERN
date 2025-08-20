@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfun(){
+           const ele= document.getElementById('myH')
+        //    const pEle=document.getElementById('myP')
+        ele.style.backgroundColor="red";
+        ele.style.color="white";
+        ele.style.textAlign="center";
+        ele.style.padding='20px 50px';
+        ele.style.border="1px solid black";
+        ele.style.borderRadius="80px";
+        // // //    console.log(ele.textContent);
+        // // //    console.log(ele.textContent);
+        // //     //  console.log(ele.innerHTML) ;
+        // //     //  console.log(ele.innerText) ;
+        // //     ele.textContent="Hello word";
+        // pEle.textContent=ele.textContent;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="myH">Hello</h1>
+    <!-- <p id="myP"></p> -->
+
+    <button type="button" onclick="myfun()">Button</button>
+    
+</body>
+</html>

@@ -1,0 +1,8 @@
+body{
+    background-color: aqua;
+}
+
+.carousel-item>img{
+    width:100%;
+    height: 500px
+}
